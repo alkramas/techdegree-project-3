@@ -10,9 +10,10 @@
   <body>
 
     <header>
-      <h1 id="top" class="main-heading">THE CODE REVIEW</h1>
-      <div class="header-info-wrapper">
-        <p class="center"></p>
+    <div class="header-info-wrapper">
+      <h1 id="top" class="main-heading center">THE CODE REVIEW</h1>
+      <h2 class="center">Sign up for our newsletter</h2>
+      <p class="center">Get the latest news on how your code is doing right in your inbox</p>
       </div>
     </header>
 
@@ -21,31 +22,42 @@
           <fieldset>
             <legend><span class="form-heading">Contact Information</span></legend>
             <label for="name">Name</label>
-            <input type="text" id="name" name="user_name" />
+            <input type="text" id="name" name="user_name">
             <label for="email">Email</label>
-            <input type="email" id="mail" name="user_mail" />
+            <input type="email" id="mail" name="user_mail">
             <label for="tel">Tel</label>
-            <input type="tel" id="tel" name="user_tel" />
+            <input type="tel" id="tel" name="user_tel">
             <label for="address">Street Adress</label>
-            <input type="text" id="address" name="user_address" />
+            <input type="text" id="address" name="user_address">
             <label for="city">City</label>
-            <input type="text" id="city" name="user_city" />
+            <input type="text" id="city" name="user_city">
 
             <label for="state">State</label>
-            <input type="text" id="state" name="user_state" />
+            <select id="state" name="user_state">
+              <option>Choose State</option>
+              <option value="state 1">State 1</option>
+              <option value="state 2">State 2</option>
+              <option value="state 3">State 3</option>
+              <option value="state 4">State 4</option>
+              <option value="state 5">State 5</option>
+              <option value="state 6">State 6</option>
+            </select>
 
             <label for="zipcode">Zip Code</label>
-            <input type="text" id="zipcode" name="user_zipcode" />
+            <input type="text" id="zipcode" name="user_zipcode" >
           </fieldset>
 
           <fieldset>
             <legend><span class="form-heading">Newsletter</span></legend>
-            <input type="checkbox" action="index.html" method="post" id="" name="user_" />
-            <input type="checkbox" action="index.html" method="post" id="" name="user_" />
-            <textarea id="comment" name="unser_comment"></textarea>
-            <button type="submit">Sign Up</button>
-          </fieldset>
 
+            <input type="checkbox" action="index.html" method="post" id="" name="user_" />
+
+            <input type="checkbox" action="index.html" method="post" id="" name="user_" />
+
+            <label for="comment">Other topics you'd like to hear about</label>
+            <textarea id="comment" name="unser_comment"></textarea>
+          </fieldset>
+          <button type="submit">Sign Up</button>
         </form>
     </div>
 
