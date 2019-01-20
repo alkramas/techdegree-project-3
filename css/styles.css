@@ -9,18 +9,32 @@ h1 {
   margin: 0;
   color: white;
   font-size: 1em;
+  font-family: 'Merriweather', serif;
 }
-h2 {
-
+* {
+  font-family: 'Merriweather', serif;
+}
+footer > p {
+  font-style: italic;
+  font-size: 0.75em;
 }
 /* --- base form elements --- */
 fieldset {
   border: none;
+  padding-left: 0;
+  padding-right: 0;
+  margin-bottom: 1.5em;
+}
+div fieldset:first-child {
+  padding: 0.5em;
+  background: rgba(46,	57,	68, 0.2);
+  border-radius: 5px;
 }
 legend {
   border-top: 1px solid black;
   width: 100%;
-  padding-top: 1em;
+  padding-top: 2em;
+  margin-bottom: .75em;
   font-weight: bold;
 }
 button {
@@ -43,28 +57,72 @@ select, input[type="text"], input[type="tel"], input[type="email"], textarea  {
   border: none;
   background: #F0F0F0;
   box-shadow: none;
-  /* margin-top: 0.25em;
-  margin-bottom: 1em; */
+  margin-top: 0.2em;
   width: 100%;
+  height: 2em;
 }
-input:focus, textarea:focus {
+option {
+  font-family: 'Merriweather', serif;
+}
+textarea {
+  height: 4em;
+}
+input:focus  {
   border: solid 2px #2E3945;
-  margin: -1px;
+  margin: 0;
+  height: calc(2em - 5px);
   outline: none;
-  margin-top: 0.25em;
+  margin-top: 0.2em;
+  box-shadow: 10px  10px 40px grey;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+}
+textarea:focus {
+  border: solid 2px #2E3945;
+  margin: 0;
+  height: calc(4em - 5px);
+  outline: none;
+  margin-top: 0.2em;
+  box-shadow: 10px  10px 40px grey;
+  transition-duration: .2s;
+  transition-timing-function: ease-out;
+}
+select:focus {
+  border: solid 2px #2E3945;
+  outline: none;
+}
+input[type="checkbox"], input[type="radio"] {
+  margin-top: 0.2em;
   margin-bottom: 0.85em;
 }
-fieldset {
-  padding-left: 0;
-  padding-right: 0;
+input[value="javascript_News"] {
+  margin-bottom: 1.5em;
 }
+#format_html, #html {
+  margin-top: .75em;
+}
+/* ---  validation --- */
+::placeholder {
+  text-align: right;
+  padding: .25em .25em 0 0;
+  font-style: italic;
+  font-size: 0.75em;
+}
+
+input:required:valid {
+  border-bottom: 2px solid green;
+}
+:focus:invalid {
+  border-bottom: 2px solid red;
+}
+
 /* ---  DRY Classes --- */
 .center {
   text-align: center;
 }
 .container {
   padding: 0 1em;
-  max-width: 400px;
+  max-width: 300px;
   margin: 0 auto;
 }
 
@@ -82,8 +140,17 @@ Media Queries
     margin-bottom: 1em;
     width: 70%;
   }
+  textarea  {
+    width: 100%;
+  }
+
   form > fieldset:first-child label {
     display: inline-block;
     width: 25%;
+  }
+  .container {
+    padding: 0 1em;
+    max-width: 500px;
+    margin: 0 auto;
   }
 }
