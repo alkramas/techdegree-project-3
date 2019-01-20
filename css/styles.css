@@ -3,16 +3,19 @@
 /* ----------------------------
 basic elements
 ---------------------------- */
+* {
+  box-sizing: border-box;
+}
 h1 {
   background-color: #2E3945;
   padding: 1em 0.5em 1em 0.5em;
   margin: 0;
   color: white;
   font-size: 1em;
-  font-family: 'Merriweather', serif;
+  font-family: 'Aleo', serif;
 }
 * {
-  font-family: 'Merriweather', serif;
+  font-family: 'Aleo', serif;
 }
 footer > p {
   font-style: italic;
@@ -62,15 +65,13 @@ select, input[type="text"], input[type="tel"], input[type="email"], textarea  {
   height: 2em;
 }
 option {
-  font-family: 'Merriweather', serif;
+  font-family: 'Aleo', serif;
 }
 textarea {
   height: 4em;
 }
 input:focus  {
   border: solid 2px #2E3945;
-  margin: 0;
-  height: calc(2em - 5px);
   outline: none;
   margin-top: 0.2em;
   box-shadow: 10px  10px 40px grey;
@@ -79,7 +80,7 @@ input:focus  {
 }
 textarea:focus {
   border: solid 2px #2E3945;
-  margin: 0;
+  margin: -1px;
   height: calc(4em - 5px);
   outline: none;
   margin-top: 0.2em;
@@ -97,6 +98,10 @@ input[type="checkbox"], input[type="radio"] {
 }
 input[value="javascript_News"] {
   margin-bottom: 1.5em;
+}
+input[type="checkbox"]:checked + label,
+input[type="radio"]:checked + label {
+  font-weight: bold;
 }
 #format_html, #html {
   margin-top: .75em;
@@ -138,15 +143,38 @@ Media Queries
     background: #F0F0F0;
     box-shadow: none;
     margin-bottom: 1em;
-    width: 70%;
+    width: 72%;
   }
   textarea  {
     width: 100%;
   }
-
   form > fieldset:first-child label {
     display: inline-block;
     width: 25%;
+  }
+  input:focus  {
+    border: solid 2px #2E3945;
+    display: inline-block;
+    outline: none;
+    margin-top: 0.2em;
+    box-shadow: 10px  10px 40px grey;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+  }
+  textarea:focus {
+    border: solid 2px #2E3945;
+    margin: -1px;
+    height: calc(4em - 5px);
+    outline: none;
+    margin-top: 0.2em;
+    margin-bottom: 1em;
+    box-shadow: 10px  10px 40px grey;
+    transition-duration: .2s;
+    transition-timing-function: ease-out;
+  }
+  select:focus {
+    border: solid 2px #2E3945;
+    outline: none;
   }
   .container {
     padding: 0 1em;
