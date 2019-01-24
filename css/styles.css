@@ -70,6 +70,9 @@ option {
 textarea {
   height: 4em;
 }
+input:required:empty {
+  border-bottom: solid 2px #2E3945;
+}
 input:focus  {
   border: solid 2px #2E3945;
   outline: none;
