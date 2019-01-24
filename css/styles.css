@@ -21,7 +21,19 @@ footer > p {
   font-style: italic;
   font-size: 0.75em;
 }
-/* --- base form elements --- */
+/* ---  DRY Classes --- */
+.center {
+  text-align: center;
+}
+.container {
+  padding: 0 1em;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* ----------------------------
+form elements
+---------------------------- */
 fieldset {
   border: none;
   padding-left: 0;
@@ -70,7 +82,7 @@ option {
 textarea {
   height: 4em;
 }
-input:required:empty {
+input:empty {
   border-bottom: solid 2px #2E3945;
 }
 input:focus  {
@@ -109,29 +121,18 @@ input[type="radio"]:checked + label {
 #format_html, #html {
   margin-top: .75em;
 }
-/* ---  validation --- */
 ::placeholder {
   text-align: right;
   padding: .25em .25em 0 0;
   font-style: italic;
   font-size: 0.75em;
 }
-
+/* ---  validation --- */
 input:required:valid {
   border-bottom: 2px solid green;
 }
 :focus:invalid {
   border-bottom: 2px solid red;
-}
-
-/* ---  DRY Classes --- */
-.center {
-  text-align: center;
-}
-.container {
-  padding: 0 1em;
-  max-width: 300px;
-  margin: 0 auto;
 }
 
 /* ----------------------------
